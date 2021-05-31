@@ -6,14 +6,12 @@ import * as Yup from "yup";
 import FromInput from "../../common/FormInput";
 import CustomButton from "../../common/CustomButton";
 import LottieView from "../../common/LottieView";
-import Loading from "../../common/Loading";
+
 import "./styleform.css";
 
 const validationSchema = Yup.object({
   header: Yup.string().required().min(10).label("Header"),
-  title: Yup.string().required().min(10).label("Title"),
-  description: Yup.string().required().min(20).label("Description"),
-  image: Yup.string().url(),
+  body: Yup.string().required().min(20).label("Body"),
 });
 
 export default function CreatePost() {
@@ -30,23 +28,14 @@ export default function CreatePost() {
         <h2 className="title">Create Post </h2>
         <Formik
           validationSchema={validationSchema}
-          initialValues={{
-            header: "",
-            title: "",
-            description: "",
-            image: "",
-          }}
+          initialValues={{ header: "", body: "" }}
           onSubmit={(values) => handleSubmit(values)}
         >
           {({ dirty, isSubmitting, isValid }) => (
             <Form className="flexCol">
               <FromInput name="header" placeholder="Post Header" />
-              <FromInput name="title" placeholder="Post Title" />
-              <FromInput name="description" placeholder="Post Description" />
-              <FromInput
-                name="image"
-                placeholder="Post Image should be url (optional)"
-              />
+              <FromInput name="body" placeholder="Post body" />
+
               <CustomButton
                 type="submit"
                 title={"Create Post"}
