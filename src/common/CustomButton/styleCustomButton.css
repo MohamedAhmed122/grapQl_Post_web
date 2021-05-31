@@ -1,0 +1,32 @@
+.primaryBtn{
+    background-color: #EAC74D;
+    width: 300px;
+    height: 46px;
+    border-radius: 10px;
+    border: 1px solid white;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    color: #FFFFFF;
+    cursor: pointer;
+    outline-width: 0;
+}
+.primaryBtn:hover{
+    background-color: #e7c64f;
+   
+}
+.btnDisabled{
+    background-color: rgb(165, 160, 160);
+    border: none;
+}
+.btnDisabled:hover{
+    background-color:rgb(165, 160, 160);
+}
+
+@media (max-width: 420px) {
+    .primaryBtn{
+        width: 270px !important;
+    }
+}
