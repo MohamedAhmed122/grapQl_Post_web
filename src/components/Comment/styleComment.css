@@ -1,0 +1,40 @@
+.comment_container {
+  width: 700px;
+}
+
+.comment {
+  border: 1px solid #fce8a0;
+  padding: 10px;
+  padding-bottom: 30px;
+  border-radius: 20px;
+}
+.date {
+  display: flex;
+  /* align-items: flex-end; */
+  justify-content: flex-end;
+  margin-top: -30px;
+  margin-right: 30px;
+}
+
+.icon_button {
+  margin-top: -10px !important;
+  background-color: white !important;
+  border: 1px solid #fce8a0 !important;
+  margin-left: 5px !important;
+}
+.chip {
+  background-color: #f7c71a !important;
+  color: white !important;
+  border: 1px solid white !important;
+}
+
+@media (max-width: 800px) {
+  .comment_container {
+    width: 500px;
+  }
+}
+@media (max-width: 550px) {
+  .comment_container {
+    width: auto;
+  }
+}
