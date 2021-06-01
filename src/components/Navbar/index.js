@@ -7,6 +7,12 @@ export default function Navbar() {
       <Link className="link" to="/">
         Post
       </Link>
+      <Link className="link" to="/login">
+        Login
+      </Link>
+      <Link className="link" to="/register">
+        Register
+      </Link>
       <Link className="link" to="/create-post">
         Create Post
       </Link>
